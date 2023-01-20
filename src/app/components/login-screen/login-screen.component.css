@@ -1,37 +1,17 @@
-.main-head{
-  height: 150px;
-  background: #272727;
+* {
+  display: grid;
 }
-.main {
-  padding: 0px 10px;
+.btn {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin-top: 20px;
+  border-color: grey;
 }
-.form-group {
-  padding: 10px
-}
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-}
-@media screen and (max-width: 450px) {
-  .login-form{
-      margin-top: 10%;
-  }
-  .register-form{
-      margin-top: 10%;
-  }
-}
-@media screen and (min-width: 768px){
-  .main{
-      margin-left: 40%;
-  }
-  .login-form{
-      margin-top: 80%;
-  }
-  .register-form{
-      margin-top: 20%;
-  }
-}
-.login-main-text{
-  margin-top: 20%;
-  padding: 60px;
-  color: #fff;
+button:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+  border-radius: 10px;
+  border-color: rgba(128, 128, 128, 0.199);
+  transition: 1s;
+  color: white;
 }
