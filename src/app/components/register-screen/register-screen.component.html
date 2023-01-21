@@ -1,20 +1,12 @@
-<div class="container-md-fluid w-100 d-flex mt-5">
-  <div>
-  <div class="row w-100">
-    <h1 class="text-align-center mb-5"> Preencha as informações solicitadas</h1>
-    <br>
-    <label>Usuário</label>
-    <input type="text" class="form-control mt-2" placeholder="Usuário" />
+<div class="container justify-content-center mt-5">
+  <div class="col-md-12 text-align-center text-center">
+    <h1 class="text-center mb-5">Preencha os campos para completar o cadastro</h1>
+    <label class="p-2">Usuário</label>
+    <input type="text" class="form-control w-50 mx-auto" placeholder="Usuário"/>
+    <label class="p-2">Email</label>
+    <input type="email" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********"/>
+    <label class="p-2">Senha</label>
+    <input type="password" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********"/>
+      <button class="btn d-inline w-50 mx-auto btn-dark btn-outline-light" routerLink="/register-screen">Salvar</button>
   </div>
-  <br>
-  <div class="row w-100">
-    <label>Senha</label>
-    <input type="password" class="form-control mt-2" placeholder="********"/>
-  </div>
-  <div class="row w-100 justify-content-center mt-5">
-    <button class="btn btn-dark btn-outline-light w-25">Login</button>
-    <br>
-    <button class="btn btn-dark btn-outline-light w-25" routerLink="/register-screen">Registrar</button>
-  </div>
-</div>
 </div>

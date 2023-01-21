@@ -65,5 +65,11 @@ app-root {
   height: 100%;
 }
 router-outlet {
+  display: grid;
+}
+app-navbar {
   display: block;
+  width: 100% !important;
+  height: 20px;
+  z-index: 10;
 }

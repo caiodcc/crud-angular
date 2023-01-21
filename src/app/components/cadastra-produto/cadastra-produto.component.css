@@ -1,6 +1,3 @@
-* {
-  display: grid;
-}
 .btn {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -15,3 +12,4 @@ button:hover {
   transition: 1s;
   color: white;
 }
+

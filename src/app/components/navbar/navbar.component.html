@@ -1,29 +1,24 @@
-<nav class="navbar navbar-expand-lg">
-  <a class="navbar-brand">Menu</a>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand align-middle ms-5" href="#">Menu</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto justify-content-center">
-      <div class="d-inline-flex p-2 w-100">
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link">Usuário</a>
+        <a class="nav-link p-2" routerLink="/busca-usuario">Usuário</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Cliente</a>
+        <a class="nav-link p-2" routerLink="/busca-produto">Produtos</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Produto</a>
+        <a class="nav-link p-2" routerLink="/busca-cliente">Clientes</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Pedido</a>
+        <a class="nav-link p-2" routerLink="/busca-pedido">Pedido</a>
       </li>
-      </div>
-      <div class="p-2 flex-grow-1 sair">
-      <li class="nav-item">
-        <a class="nav-link">Sair</a>
-      </li>
-      </div>
-      </ul>
-      </div>
-</nav>
+    </ul>
+    <li class="nav-item" id="sair">
+      <a class="nav-link p-2" href="#">Sair</a>
+    </li>
+    </div>
