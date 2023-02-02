@@ -1,12 +1,17 @@
 <div class="container justify-content-center mt-5">
   <div class="col-md-12 text-align-center text-center">
     <h1 class="text-center mb-5">Preencha os campos para completar o cadastro</h1>
-    <label class="p-2">Usuário</label>
-    <input type="text" class="form-control w-50 mx-auto" placeholder="Usuário"/>
-    <label class="p-2">Email</label>
-    <input type="email" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********"/>
-    <label class="p-2">Senha</label>
-    <input type="password" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********"/>
-      <button class="btn d-inline w-50 mx-auto btn-dark btn-outline-light" routerLink="/register-screen">Salvar</button>
+    <form [formGroup]="frm">
+      <label class="p-2">Usuário</label>
+      <input type="text" class="form-control w-50 mx-auto" placeholder="Usuário" formControlName="nome" />
+      <label class="p-2">Email</label>
+      <input type="email" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********" formControlName="email" />
+      <label class="p-2">Senha</label>
+      <input type="password" class="form-control w-50 mx-auto mt-1 mb-2" placeholder="********"
+        formControlName="senha" />
+      <button type="button" (click)="salvar()"
+        class="btn d-inline w-50 mx-auto btn-dark btn-outline-light">Salvar</button>
+      <a class="btn d-inline w-50 mx-auto btn-dark btn-outline-light" routerLink="/busca-usuario">Voltar</a>
+    </form>
   </div>
 </div>
