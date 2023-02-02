@@ -6,8 +6,8 @@ import { HttpClient } from "@angular/common/http";
 })
 export class UsuarioService {
 
-    //private apiUrl: any = "http://appcaio.decode.com.br/api";
-    private apiUrl: any = "http://localhost:61686/api";
+    private apiUrl: any = "http://appcaio.decode.com.br/api";
+    //private apiUrl: any = "http://localhost:61686/api";
 
     constructor(private http: HttpClient) { }
 
