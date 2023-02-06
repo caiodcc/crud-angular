@@ -3,10 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {RouterModule} from '@angular/router';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { BuscaClienteComponent } from './components/busca-cliente/busca-cliente.component';
 import { BuscaPedidoComponent } from './components/busca-pedido/busca-pedido.component';
 import { BuscaProdutoComponent } from './components/busca-produto/busca-produto.component';

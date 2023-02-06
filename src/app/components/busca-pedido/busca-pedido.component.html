@@ -7,32 +7,46 @@
         <button type="button" class="btn p-2 btn-primary btn-dark mx-auto mt-3">Buscar</button>
         </div>
         <div class="row">
-        <button type="button" href="/cadastra-produto" routerLinkActive="router-link-active"  class="btn p-2 w-25 btn-primary btn-dark mx-auto mt-3">Novo produto</button>
+        <button type="button" routerLink="/cadastra-pedido" routerLinkActive="router-link-active"  class="btn p-2 w-25 btn-primary btn-dark mx-auto mt-3">Novo pedido</button>
         </div>
       </div>
     </div>
-<div class="col-md-12 text-align-center w-75 mx-auto text-center">
-  <table class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Valor</th>
-        <th scope="col">Nome</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">250$</th>
-        <td>Mark</td>
-      </tr>
-      <tr>
-        <th scope="row">250$</th>
-        <td>Jacob</td>
-      </tr>
-      <tr>
-        <th scope="row">250$</th>
-        <td>Larry</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    <div
+    *ngIf="pedidos.length == 0"
+    class="alert alert-primary mt-3 w-75 mx-auto"
+    role="alert"
+  >
+    Nenhum registro encontrado
+  </div>
 
+  <div
+    *ngIf="pedidos.length > 0"
+    class="col-md-12 text-align-center w-75 mx-auto text-center"
+  >
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">ID</th>
+          <th scope="col">Valor</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let pd of pedidos">
+          <th scope="row">{{ pd.id }}</th>
+          <td>{{ pd.quantidade }}</td>
+          <td></td>
+          <td>{{ pd.produto }}</td>
+          <td>
+            <a
+              [routerLink]="['/edita-pedido', pd.id]"
+              class="btn btn-light btn-sm"
+            >
+              Editar</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

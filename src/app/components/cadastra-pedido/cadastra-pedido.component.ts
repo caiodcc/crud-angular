@@ -36,7 +36,7 @@ export class CadastraPedidoComponent implements OnInit {
     let valorTotal = this.frm.value.valorTotal;
     let dataPedido = this.frm.value.dataPedido;
 
-    if(!this.frm.valid) {
+    if(this.frm.valid) {
       return console.log('Validado')
     }
 

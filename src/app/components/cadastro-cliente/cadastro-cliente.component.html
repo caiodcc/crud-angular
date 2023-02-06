@@ -1,19 +1,23 @@
 <div class="container justify-content-center mt-5">
-  <div class="col-md-12 text-align-center text-center">
+  <div class="col-md-12 form-group text-align-center text-center">
     <h1 class="text-center mb-5">Preencha as informações necessárias</h1>
 
+    <form [formGroup]="frm">
+
     <label class="p-2">ID</label>
-    <input type="number" class="form-control text-center mx-auto form-control-sm w-25" style="width: 100px !important" formControlName="id" placeholder="ID"/>
+    <input type="number" class="form-control text-center mx-auto w-25" style="width: 100px !important" formControlName="id" placeholder="ID"/>
 
-    <label class="p-2">Usuário</label>
-    <input type="text" class="form-control mx-auto form-control-sm w-25" placeholder="Usuário"/>
+    <label class="p-2">Cliente</label>
+    <input type="text" class="form-control mx-auto w-25" formControlName="nome" placeholder="Nome"/>
 
-    <label class="p-2">Senha</label>
-    <input type="password" class="form-control mx-auto form-control-sm  w-25 mt-1 mb-2" placeholder="********"/>
+    <label class="p-2">Email</label>
+    <input type="email" class="form-control mx-auto  w-25 mt-1 mb-2" formControlName="email" placeholder="email@email.com"/>
 
     <label class="p-2">CPF</label>
-    <input type="number" class="mb-3 form-control mx-auto form-control-sm w-25" placeholder="CPF"/>
+    <input type="number" class="mb-3 form-control mx-auto w-25" formControlName="cpf" placeholder="CPF"/>
 
-    <button class="btn d-inline btn-dark btn-outline-light" routerLink="">Registrar</button>
+    <button type="button" class="btn d-inline btn-dark btn-outline-light" (click)="registroCliente()">Registrar</button>
+
+    </form>
   </div>
 </div>

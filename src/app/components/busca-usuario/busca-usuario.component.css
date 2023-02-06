@@ -4,7 +4,7 @@
   margin-top: 20px;
   border-color: grey;
 }
-button:hover {
+btn:hover {
   cursor: pointer;
   background-color: var(--hover-color);
   border-radius: 10px;

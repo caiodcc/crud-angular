@@ -1,15 +1,17 @@
 <div class="container justify-content-center mt-5">
   <div class="col-md-12 text-align-center text-center">
+    <form [formGroup]="frm">
     <h1 class="text-center mb-5">Preencha as informações necessárias</h1>
     <label class="p-2">Cliente</label>
-    <input type="name" class="form-control mx-auto form-control-sm w-25" placeholder="Cliente"/>
+    <input type="name" formControlName="cliente" class="form-control mx-auto form-control-sm w-25" placeholder="Cliente"/>
     <label class="p-2">Produto</label>
-    <input type="name" class="form-control mx-auto form-control-sm  w-25 mt-1 mb-2" placeholder="Nome do Cliente"/>
+    <input type="name" class="form-control mx-auto form-control-sm  w-25 mt-1 mb-2" formControlName="produto" placeholder="Nome do Cliente"/>
     <label class="p-2">Quantidade</label>
-    <input type="number" class="mb-3 form-control mx-auto form-control-sm w-25" placeholder="Quantidade"/>
+    <input type="number" class="mb-3 form-control mx-auto form-control-sm w-25" formControlName="quantidade" placeholder="Quantidade"/>
     <label class="p-2">Total</label>
-    <input type="number" style="width: 75px" class="form-control disabled mx-auto form-control-sm mt-1 mb-2">
+    <input type="number" style="width: 75px" class="form-control disabled mx-auto form-control-sm mt-1 mb-2" formControlName="total">
     <br>
-    <button class="btn d-inline btn-dark btn-outline-light" routerLink="">Registrar</button>
+    <button type="button" class="btn d-inline btn-dark btn-outline-light" routerLink="">Registrar</button>
+    </form>
   </div>
 </div>

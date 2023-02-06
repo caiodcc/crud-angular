@@ -1,5 +1,6 @@
 <div class="container justify-content-center mt-5">
   <div class="col-md-12 text-align-center text-center">
+    <form [formGroup]="frm">
     <h1 class="text-center mb-5">Preencha as informações necessárias</h1>
 
     <label class="p-2">ID</label>
@@ -14,6 +15,8 @@
     <label class="p-2">Descrição</label>
     <input type="textarea" class="mb-3 form-control mx-auto form-control-sm w-25" formControlName="descricao" placeholder="Descrição"/>
 
-    <button class="btn d-inline btn-dark btn-outline-light" (click)="registrarProd()" routerLink="">Registrar</button>
+
+    <button type="button" class="btn d-inline btn-dark btn-outline-light" (click)="registrarProd()" routerLink="">Registrar</button>
+    </form>
   </div>
 </div>
