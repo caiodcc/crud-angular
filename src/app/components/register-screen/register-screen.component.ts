@@ -29,7 +29,8 @@ export class RegisterScreenComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    if (this.id !== 0) {
+
+    if (this.id) {
       this.usuarioService.obterUsuario(this.id)
         .subscribe((result: any) => {
           this.frm.controls["nome"].setValue(result.nome);
@@ -42,12 +43,12 @@ export class RegisterScreenComponent implements OnInit {
   salvar() {
     if (!this.frm.valid) return;
 
-    if (!this.id) {
+    if (!this.id) { //criar um novo usuário
       this.usuarioService.criar(this.frm.value).subscribe((data: any) => {
         this.router.navigate(['/busca-usuario']);
       });
     }
-    else {
+    else { // alterar um usuário já cadastrado
       const data = {
         id: this.id,
         nome: this.frm.value.nome,
